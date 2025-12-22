@@ -92,6 +92,9 @@ function Export-Scan {
     $stamp = Get-Date -Format "yyyyMMdd_HHmmss"
     $jsonPath = "triage_$stamp.json"
     $txtPath  = "triage_$stamp.txt"
+    $autorunsCsvPath = "triage_$stamp_autoruns.csv"
+    $usersCsvPath    = "triage_$stamp_users.csv"
+
 
     # JSON export
     $global:LastScan | ConvertTo-Json -Depth 5 | Set-Content -Path $jsonPath -Encoding UTF8
@@ -112,9 +115,17 @@ function Export-Scan {
     $global:LastScan.Autoruns | ForEach-Object { $lines += ($_.Key + " | " + $_.Name + " | " + $_.Value) }
 
     $lines | Set-Content -Path $txtPath -Encoding UTF8
+    # CSV export (easy to review/filter)
+    $global:LastScan.Autoruns | Export-Csv -Path $autorunsCsvPath -NoTypeInformation -Encoding UTF8
+    $global:LastScan.Users    | ForEach-Object { [pscustomobject]@{ User = $_ } } |
+    Export-Csv -Path $usersCsvPath -NoTypeInformation -Encoding UTF8
+
 
     Write-Host "Exported: $jsonPath" -ForegroundColor Green
     Write-Host "Exported: $txtPath" -ForegroundColor Green
+    Write-Host "Exported: $autorunsCsvPath" -ForegroundColor Green
+    Write-Host "Exported: $usersCsvPath" -ForegroundColor Green
+
 }
 
 function Show-Menu {
