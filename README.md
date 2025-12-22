@@ -29,6 +29,10 @@ reviewed during initial incident response.
 ## Export
 - JSON file (structured, machine-readable)
 - TXT file (human-readable report)
+- CSV files:
+  - Autoruns (Run/RunOnce) as CSV for easy filtering
+  - Users list as CSV
+
 
 ## Sample Output
 See: `samples/sample-output.txt` 
