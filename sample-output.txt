@@ -1,0 +1,22 @@
+﻿Windows IR Triage Export
+Timestamp: 2025-01-01 10:00:00
+ComputerName: SAMPLE-PC
+OS: Microsoft Windows 11 Pro
+OS_Version: 10.0.xxxxx
+LastBootUpTime: 2024-12-30 08:15:00
+
+Users (count: 3)
+- user1
+- user2
+- administrator
+
+Autoruns (count: 9)
+HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | SecurityHealth | C:\WINDOWS\system32\SecurityHealthSystray.exe
+HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | AudioService | C:\WINDOWS\System32\Drivers\AudioService.exe
+HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | OEMUtility | C:\Program Files\OEM\Utility.exe
+HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce | BrowserCleanup | C:\Program Files\Browser\Installer\cleanup.exe
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | CloudSync | C:\Program Files\Cloud\Sync.exe
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | TranslationApp | C:\Users\user1\AppData\Local\App\App.exe
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | ChatClient | C:\Users\user1\AppData\Local\Chat\Client.exe
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | ProductivityTool | C:\Program Files\Productivity\Tool.exe
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run | BrowserAutoLaunch | C:\Program Files\Browser\Application\browser.exe
