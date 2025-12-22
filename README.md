@@ -31,7 +31,7 @@ reviewed during initial incident response.
 - TXT file (human-readable report)
 
 ## Sample Output
-See: `samples/sample-output.txt`
+See: `samples/sample-output.txt` 
 
 ## Usage
 Run PowerShell **as Administrator** (recommended):
