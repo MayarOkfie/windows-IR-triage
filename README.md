@@ -42,4 +42,6 @@ Run PowerShell **as Administrator** (recommended):
 
 ```powershell
 .\triage.ps1
-##For more detailes following the artical: https://shorturl.at/9gjVp
+
+
+For more detailes following the artical: https://shorturl.at/9gjVp
